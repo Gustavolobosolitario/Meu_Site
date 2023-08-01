@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Meu Portfólio</h1>
+    </header>
+    <nav>
+        <!--Adcione os links para as outras páginas aqui-->
+    </nav>
+    <main>
+        <section>
+            <h2>Sobre Mim</h2>
+            <!--Adcione informações sobre você aqui-->
+        </section>
+        <section>
+            <h2>Projetos</h2>
+            <!-- Adicione a lista de projetos aqui -->
+        </section>
+        <section>
+            <h2>Habilidades Técnicas</h2>
+            <!-- Adicione a lista de habilidades técnicas aqui -->
+        </section>
+        <section>
+            <h2>Portfólio de Dados</h2>
+            <!-- Adicione gráficos ou visualizações de dados aqui -->
+        </section>
+        <section>
+            <h2>Certificações e Conquistas</h2>
+            <!-- Adicione informações sobre suas certificações e conquistas aqui -->
+            </section>
+            <section>
+                <h2>Contatos</h2>
+                <!-- Adicione um formulário de contato ou informações de contato aqui -->
+            </section>
+            <section>
+                <h2>Curriculo</h2>
+                <!-- Adicione um botão para fazer download do currículo em formato PDF aqui -->
+            </section>
+        </main>
+        <footer>
+            
+    <h1>Meu Portfólio</h1>
+
+    {% for project in projects %}
+    <div class="project">
+        <h2>{{ project.title }}</h2>
+        <p>{{ project.description }}</p>
+        <img src="{{ project.image.url }}" alt="{{ project.title }}">
+    </div>
+    {% endfor %}
+    <link rel="stylesheet" hret="{% static 'portfolio/css/style.css' %}">
+    <script src="/static/portfolio/js/script.js"></script>
+        </footer>
+    </body>
+    </html>
